@@ -33,7 +33,7 @@ def update_record_a(ip: str) -> bool:
     record: records = ns1_api.loadRecord(DOMAIN_FOR_UPDATE, 'A')
     upd_ip = record.data['answers'][0]['answer'][0]
 
-    if isinstance(upd_ip, str) and ip is not upd_ip:
+    if isinstance(upd_ip, str) and ip != upd_ip:
         record.update(answers=[ip])
 
         return True
