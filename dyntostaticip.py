@@ -16,9 +16,9 @@ from ns1 import NS1, records
 
 import sys
 
-MIWIFI_PASS = sys.argv[1]
-NS1_API = sys.argv[2]
-DOMAIN_FOR_UPDATE = sys.argv[3]
+MIWIFI_PASS: str = sys.argv[1]
+NS1_API: str = sys.argv[2]
+DOMAIN_FOR_UPDATE: str = sys.argv[3]
 
 
 def define_new_ip() -> str:
